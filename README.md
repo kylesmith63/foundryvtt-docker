@@ -6,7 +6,7 @@ This image is for running [FoundryVTT](https://foundryvtt.com/) in docker and is
 
 First you need to download the latest linux foundryvtt build (link provided from Patreon.) Then you need to extract all the files into a directory you will mount in a volume with the docker container.
 
-I use `/var/data/volume/foundry/app` on my linux host and `/home/foundry/app` in the container. So you will extract the contents of `foundryvtt-*.zip` into `/var/data/volume/foundry/app` based on my setup.
+I use `/var/data/volume/foundry/fvtt` on my linux host and `/home/foundry/app` in the container. So you will extract the contents of `foundryvtt-*.zip` into `/var/data/volume/foundry/fvtt` based on my setup.
 
 ## Basics
 
@@ -15,7 +15,7 @@ To run with persistent data (Keeps all changes between restarts) run the below c
 ```
 docker run --restart=always --name foundryvtt -p 30000:30000 \
 -v /var/data/volume/foundry/data:/home/foundry/data \
--v /var/data/volume/foundry/app:/home/foundry/app \
+-v /var/data/volume/foundry/app:/home/foundry/fvtt \
 -d spoctoss/foundryvtt
 ```
 
@@ -30,7 +30,7 @@ services:
     ports:
       - '30000:30000'
     volumes:
-      - /var/data/volume/foundry/app:/home/foundry/app
+      - /var/data/volume/foundry/app:/home/foundry/fvtt
       - /var/data/volume/foundry/data:/home/foundry/data
     image: spoctoss/foundryvtt
 ```
@@ -41,7 +41,7 @@ I personally run this on docker swarm with traefik v2 as the proxy so I know it 
 
 Using volumes will allow you to persist your game data between reboots of the container or server it is running on.
 
-* **/home/foundry/app** - Directory where you would extract the linux release of the foundry zip file.
+* **/home/foundry/fvtt** - Directory where you would extract the linux release of the foundry zip file.
 * **/home/foundry/data** - Directory where all your data ie. uploads game info and any customizations are stored (Keep this backed up)
 
 ## Conclusion

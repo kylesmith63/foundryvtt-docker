@@ -1,6 +1,3 @@
-FoundryVTT README
-===
-
 ## Intro
 
 This image is for running [FoundryVTT](https://foundryvtt.com/) in docker and is based on the [Node 12 Alpine](https://hub.docker.com/_/node/) image. It currently works with verion 0.5.*

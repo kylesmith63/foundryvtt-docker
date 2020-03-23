@@ -35,6 +35,8 @@ services:
     image: spoctoss/foundryvtt
 ```
 
+I personally run this on docker swarm with traefik v2 as the proxy so I know it will work in that or similar setups.
+
 ### Volumes
 
 Using volumes will allow you to persist your game data between reboots of the container or server it is running on.

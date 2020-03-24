@@ -4,6 +4,8 @@ This image is for running [FoundryVTT](https://foundryvtt.com/) in docker and is
 
 This is based on the work from https://github.com/mikysan/simple-fvtt-dockerfile
 
+![Docker Pulls](https://img.shields.io/docker/pulls/spoctoss/foundryvtt)
+
 ## Getting Started
 
 First you need to download the latest linux foundryvtt build (link provided from Patreon.) Then you need to extract all the files into a directory you will mount in a volume with the docker container.

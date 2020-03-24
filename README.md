@@ -2,6 +2,8 @@
 
 This image is for running [FoundryVTT](https://foundryvtt.com/) in docker and is based on the [Node 12 Alpine](https://hub.docker.com/_/node/) image. It currently works with verion 0.5.*
 
+This is based on the work from https://github.com/mikysan/simple-fvtt-dockerfile
+
 ## Getting Started
 
 First you need to download the latest linux foundryvtt build (link provided from Patreon.) Then you need to extract all the files into a directory you will mount in a volume with the docker container.

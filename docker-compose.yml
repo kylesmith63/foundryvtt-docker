@@ -5,6 +5,6 @@ services:
     ports:
       - '30000:30000'
     volumes:
-      - /var/data/volume/foundry/app:/home/foundry/fvtt
+      - /var/data/volume/foundry/fvtt:/home/foundry/fvtt
       - /var/data/volume/foundry/data:/home/foundry/data
     image: spoctoss/foundryvtt

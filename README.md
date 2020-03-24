@@ -14,8 +14,8 @@ To run with persistent data (Keeps all changes between restarts) run the below c
 
 ```
 docker run --restart=always --name foundryvtt -p 30000:30000 \
+-v /var/data/volume/foundry/fvtt:/home/foundry/fvtt \
 -v /var/data/volume/foundry/data:/home/foundry/data \
--v /var/data/volume/foundry/app:/home/foundry/fvtt \
 -d spoctoss/foundryvtt
 ```
 
@@ -30,7 +30,7 @@ services:
     ports:
       - '30000:30000'
     volumes:
-      - /var/data/volume/foundry/app:/home/foundry/fvtt
+      - /var/data/volume/foundry/fvtt:/home/foundry/fvtt
       - /var/data/volume/foundry/data:/home/foundry/data
     image: spoctoss/foundryvtt
 ```

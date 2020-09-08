@@ -1,6 +1,6 @@
 ## Intro
 
-This image is for running [FoundryVTT](https://foundryvtt.com/) in docker and is based on the [Node 12 Alpine](https://hub.docker.com/_/node/) image. It currently works with verion 0.5.*
+This image is for running [FoundryVTT](https://foundryvtt.com/) in docker and is based on the [Node 12 Alpine](https://hub.docker.com/_/node/) image. It currently works with verion 0.5.* and 0.6.*
 
 This image does not include the FoundryVTT files themselves, you will need to get them from their [Patreon](https://www.patreon.com/foundryvtt/) page by becoming a supporter.
 
